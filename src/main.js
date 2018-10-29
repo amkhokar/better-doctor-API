@@ -27,14 +27,14 @@ $(document).ready(function () {
           phoneString[13] = body.data[i].practices[0].phones[0].number[9];
           $("#result").append(`<h1>${body.data[i].practices[0].name}</h1>
             <h3 style='color: blue'>Address:</h3>
-            <h5 style='color: orange'>${body.data[i].practices[0].visit_address.street}, ${body.data[i].practices[0].visit_address.zip}</h5>
-            <h5 style='color: red'>${body.data[i].practices[0].visit_address.city}, ${body.data[i].practices[0].visit_address.state}</h5>
+            <h7>${body.data[i].practices[0].visit_address.street}, ${body.data[i].practices[0].visit_address.zip},</h7>
+            <h7>${body.data[i].practices[0].visit_address.city}, ${body.data[i].practices[0].visit_address.state}</h7>
             <h3 style='color:purple'>Phone Number:</h3>
-            <h5>${phoneString.join('')}</h5>
-            <h3 style='color:gray'>Website</h3>
-            <h5>${body.data[i].practices[0].website ? body.data[i].practices[0].website: "no website"}</h5>
-            <h3>Accepting new patients?</h3>
-            <h5>${body.data[i].practices[0].accepts_new_patients ? "yes": "no"}</h5><hr>`
+            <h7>${phoneString.join('')}</h7>
+            <h3 style='color:teal'>Website</h3>
+            <h7>${body.data[i].practices[0].website ? body.data[i].practices[0].website: "no website"}</h7>
+            <h3 style='color: orange'>Accepting new patients?</h3>
+            <h7>${body.data[i].practices[0].accepts_new_patients ? "yes": "no"}</h7><hr>`
           );
         }
       } else {
