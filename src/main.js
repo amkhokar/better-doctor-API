@@ -5,16 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(document).ready(function () {
-  $('#film-form').submit(function (event) {
+  $('#name-form').submit(function (event) {
     event.preventDefault();
     $('#result').text("");
     let promise = getDoctor();
 
     promise.then(function (response) {
       let body = JSON.parse(response);
-      for (let i = 0; i < body.results.length; i++) {
-        $('#result').append(body.results[i].name);
-      }
+      $('#result').append(body);
     }, function (error) {
       $('.showErrors').text(`There was an error processing your request : ${error.message}`);
     });
