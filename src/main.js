@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     promise.then(function (response) {
       let body = JSON.parse(response);
-      $('#result').append(body);
+      $('#result').append(body.data[0].name);
     }, function (error) {
       $('.showErrors').text(`There was an error processing your request : ${error.message}`);
     });
