@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(document).ready(function () {
-  $('#name-form').submit(function (event) {
+  $('#condition-form').submit(function (event) {
     event.preventDefault();
     $('#result').text("");
     let promise = getDoctor();
