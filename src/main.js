@@ -8,11 +8,12 @@ $(document).ready(function () {
   $('#condition-form').submit(function (event) {
     event.preventDefault();
     $('#result').text("");
-    let promise = getDoctor();
+    let queryString = $("#condition").val();
+    let promise = getDoctor(queryString);
 
     promise.then(function (response) {
       let body = JSON.parse(response);
-      $('#result').append(body.data[0].name);
+      
     }, function (error) {
       $('.showErrors').text(`There was an error processing your request : ${error.message}`);
     });
