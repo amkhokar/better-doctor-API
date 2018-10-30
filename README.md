@@ -17,7 +17,12 @@ A program in which the user can search for doctors in Seattle, WA based on a con
 ## Setup/Installation Requirements
 1. Clone this repository.
 2. Open your terminal (or powershell) and type 'npm install' from the root directory of the cloned repository.
-3. Once dependencies are installed, type 'npm start' to run the application or 'npm test' to see the tests (for grading purposes).
+3. Create a file in the root directory called '.env'
+4. Go to https://developer.betterdoctor.com/ and sign up to receive an api key.
+5. Once you receive the api key, open your '.env' file and insert the following:<br>
+exports.apikey = your_api_key_value_goes_here
+6. type 'npm start' in your terminal from the root directory of the cloned respository to run the application.
+7. Type in a condition or doctor name to receive a list of doctors.
 
 ## Known Bugs
 No known bugs at this time. 
@@ -30,6 +35,7 @@ No known bugs at this time.
 6. Webpack
 7. TypeScript
 8. ESLint
+9. Better Doctor API
 
 ## Support and contact details
 
@@ -41,13 +47,3 @@ Find more from me at https://github.com/amkhokar/
 *This software is licensed under the MIT license*
 
 Copyright (c) 2018 **_Ahmed Khokar_**
-
-
-Setup Instructions
-Place your token in an .env file at the top level of your directory. (For grading purposes, name your API key variable exports.apiKey in .env. Keep spelling and capitalization identical, as it considerably speeds up the grading process.)
-Include .env in .gitignore.
-Use at least two JavaScript files: One to receive form input and another to make an API request and display results.
-This example assumes your API Key is stored in an apiKey variable, as described in this lesson. In order to make your applications quick to grade, please follow the example exactly and do not rename your apiKey variable to something different.
-Additional Resources
-Consult the BetterDoctor API documentation for further information. The documentation is extensive and allows you to experiment with different queries for your API calls before putting together your code!
-
