@@ -19,8 +19,8 @@ A program in which the user can search for doctors in Seattle, WA based on a con
 2. Open your terminal (or powershell) and type 'npm install' from the root directory of the cloned repository.
 3. Create a file in the root directory called '.env'
 4. Go to https://developer.betterdoctor.com/ and sign up to receive an api key.
-5. Once you receive the api key, open your '.env' file and insert the following:<br>
-exports.apikey = your_api_key_value_goes_here
+5. Once you receive the api key, open your '.env' file and insert the following (you_api_key_value_goes_here should be replaced with the api key):<br>
+API_KEY = your_api_key_value_goes_here
 6. type 'npm start' in your terminal from the root directory of the cloned respository to run the application.
 7. Type in a condition or doctor name to receive a list of doctors.
 
