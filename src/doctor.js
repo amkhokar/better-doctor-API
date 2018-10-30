@@ -17,7 +17,7 @@ export function getDoctorByCondition(searchCondition) {
 export function getDoctorByName(name) {
   return new Promise(function (resolve, reject) {
     let request = new XMLHttpRequest();
-    let url = `https://api.betterdoctor.com/2016-03-01/doctors?skip=0&limit=10&name=${name}&location=wa-seattle&user_key=${process.env.API_KEY}`;
+    let url = `https://api.betterdoctor.com/2016-03-01/doctors?skip=0&limit=10&name=${name}&location=wa-seattle&user_key=${process.env.exports.apikey}`;
     request.onload = function () {
       if (this.status === 200) {
         resolve(request.response);
