@@ -72,7 +72,7 @@ $(document).ready(function () {
             <h3 style='color:teal'>WEBSITE:</h3>
             <h7>${body.data[i].practices[0].website ? body.data[i].practices[0].website: "website unavailable"}</h7>
             <h3 style='color: orange'>ACCEPTING NEW PATIENTS:</h3>
-            <h7>${body.data[i].practices[0].accepts_new_patients}</h7><hr>`
+            <h7>${body.data[i].practices[0].accepts_new_patients ? "yes" : "no"}</h7><hr>`
           );
         }
       } else {
